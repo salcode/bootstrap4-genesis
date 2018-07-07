@@ -1,0 +1,24 @@
+{
+  "name": "bootstrap4-genesis",
+  "version": "0.1.0",
+  "description": "WordPress Genesis Child Theme using Bootstrap 4",
+  "main": "functions.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salcode/bootstrap4-genesis.git"
+  },
+  "keywords": [
+    "WordPress",
+    "Genesis",
+    "Bootstrap"
+  ],
+  "author": "Sal Ferrarello",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/salcode/bootstrap4-genesis/issues"
+  },
+  "homepage": "https://github.com/salcode/bootstrap4-genesis/blob/master/README.md"
+}
