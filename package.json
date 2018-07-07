@@ -21,7 +21,7 @@
     "url": "https://github.com/salcode/bootstrap4-genesis/issues"
   },
   "homepage": "https://github.com/salcode/bootstrap4-genesis/blob/master/README.md",
-  "dependencies": {
+  "devDependencies": {
     "bootstrap": "^4.1.1"
   }
 }
