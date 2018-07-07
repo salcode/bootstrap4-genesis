@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/salcode/bootstrap4-genesis/issues"
   },
-  "homepage": "https://github.com/salcode/bootstrap4-genesis/blob/master/README.md"
+  "homepage": "https://github.com/salcode/bootstrap4-genesis/blob/master/README.md",
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
 }
