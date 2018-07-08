@@ -1,18 +1,25 @@
 'use strict';
 
+var sassFiles = 'sass/main.scss';
+
+var sassConfig = {
+	outputStyle: 'compressed'
+};
+
 var styleCssBanner = ['/**',
-  ' * Theme Name: <%= pkg.config.theme.title %>',
-  ' * Theme URI: <%= pkg.homepage %>',
-  ' * Author: <%= pkg.contributors[0].name %>',
-  ' * Author URI: <%= pkg.contributors[0].url %>',
-  ' * Description: <%= pkg.description %>',
-  ' * Version: <%= pkg.version %>',
-  ' * License: <%= pkg.config.theme.license %>',
-  ' * License URI: <%= pkg.config.theme.licenseuri %>',
-  ' * Text Domain: <%= pkg.config.themetextdomain %>',
-  ' * Tags: <%= pkg.config.themetags %>',
-  ' * Domain Path: /languages',
-  ' * Template: genesis',
+  ' * Theme Name: <%= theme.name %>',
+  ' * Theme URI: <%= theme.uri %>',
+  ' * Author: <%= theme.author %>',
+  ' * Author URI: <%= theme.authoruri %>',
+  ' * Description: <%= theme.description %>',
+  ' * Version: <%= theme.version %>',
+  ' * License: <%= theme.license %>',
+  ' * License URI: <%= theme.licenseuri %>',
+  ' * Text Domain: <%= theme.textdomain %>',
+  ' * Tags: <%= theme.tags %>',
+  ' * Domain Path: <%= theme.domainpath %>',
+  ' * Template: <%= theme.template %>',
+  ' * Notes: <%= theme.notes %>',
   ' */',
   ''].join('\n');
 
@@ -23,13 +30,23 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps')
 
-gulp.task('default', function( done ) {
+gulp.task('build:css', function( done ) {
   gulp.src('sass/main.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass(sassConfig).on('error', sass.logError))
     .pipe(rename('style.css'))
-    .pipe(header(styleCssBanner, { pkg: pkg } ))
+    .pipe(header(styleCssBanner, { theme: pkg.config.theme } ))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('.'));
   done();
 });
+
+gulp.task("watch", function(done) {
+
+  sassConfig.outputStyle = 'nested';
+  gulp.watch(sassFiles, gulp.parallel('build:css'));
+
+  done();
+});
+
+gulp.task('build', gulp.parallel('build:css'));
