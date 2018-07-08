@@ -2,7 +2,24 @@
   "name": "bootstrap4-genesis",
   "version": "0.1.0",
   "description": "WordPress Genesis Child Theme using Bootstrap 4",
-  "main": "functions.php",
+  "config": {
+    "theme": {
+      "name": "Bootstrap4 Genesis",
+      "uri": "https://github.com/salcode/bootstrap4-genesis",
+      "author": "Sal Ferrarello",
+      "authoruri": "https://salferrarello.com",
+      "description": "WordPress Genesis Child Theme using Bootstrap 4",
+      "version": "0.1.0",
+      "license": "GPL-2.0-or-later",
+      "licenseuri": "https://spdx.org/licenses/GPL-2.0-or-later.html",
+      "textdomain": "bootstrap4-genesis",
+      "tags": "Bootstrap, Genesis",
+      "domainpath": "/languages",
+      "template": "genesis",
+      "notes": "This Genesis child theme is based on\\n[Bootstrap4 Genesis](https://github.com/salcode/bootstrap4-genesis)."
+    }
+  },
+  "main": "Gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
