@@ -16,12 +16,13 @@
       "tags": "Bootstrap, Genesis",
       "domainpath": "/languages",
       "template": "genesis",
-      "notes": "This Genesis child theme is based on\\n[Bootstrap4 Genesis](https://github.com/salcode/bootstrap4-genesis)."
+      "notes": "Based on https://github.com/salcode/bootstrap4-genesis"
     }
   },
   "main": "Gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -32,15 +33,24 @@
     "Genesis",
     "Bootstrap"
   ],
-  "author": "Sal Ferrarello",
-  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Sal Ferrarello",
+      "url": "https://salferrarello.com"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
   "bugs": {
     "url": "https://github.com/salcode/bootstrap4-genesis/issues"
   },
   "homepage": "https://github.com/salcode/bootstrap4-genesis/blob/master/README.md",
   "devDependencies": {
     "bootstrap": "^4.1.1",
-    "webpack": "^4.15.1",
-    "webpack-command": "^0.4.1"
+    "gulp": "^4.0.0",
+    "gulp-header": "^2.0.5",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0"
   }
 }
