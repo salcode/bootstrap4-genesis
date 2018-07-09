@@ -1,0 +1,22 @@
+{
+    "name": "salcode/bootstrap4-genesis",
+    "description": "WordPress Genesis Child Theme using Bootstrap 4",
+    "type": "wordpress-theme",
+    "require-dev": {
+        "wp-coding-standards/wpcs": "dev-master",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4"
+    },
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Sal Ferrarello",
+            "homepage": "https://salferrarello.com"
+        }
+    ],
+    "support": {
+			"docs": "https://github.com/salcode/bootstrap4-genesis",
+			"source": "https://github.com/salcode/bootstrap4-genesis",
+			"wiki": "https://github.com/salcode/bootstrap4-genesis/wiki",
+      "issues": "https://github.com/salcode/bootstrap4-genesis/issues"
+    }
+}
