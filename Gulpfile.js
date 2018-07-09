@@ -1,6 +1,7 @@
 'use strict';
 
-var sassFiles = 'sass/main.scss';
+var sassFiles = 'sass/main.scss',
+  jsFiles = [ 'js/custom/**/*.js' ];
 
 var sassConfig = {
 	outputStyle: 'compressed'
@@ -23,12 +24,14 @@ var styleCssBanner = ['/**',
   ' */',
   ''].join('\n');
 
-var gulp = require('gulp'),
+var concat = require('gulp-concat'),
+  gulp = require('gulp'),
   header = require('gulp-header'),
   pkg = require('./package.json'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps')
+  sourcemaps = require('gulp-sourcemaps'),
+  uglify = require('gulp-uglify');
 
 gulp.task('build:css', function( done ) {
   gulp.src('sass/main.scss')
@@ -41,12 +44,24 @@ gulp.task('build:css', function( done ) {
   done();
 });
 
+gulp.task('build:js', function( done ) {
+  gulp.src(['node_modules/bootstrap/dist/js/bootstrap.bundle.js'].concat(jsFiles))
+    .pipe(sourcemaps.init())
+    .pipe(concat('javascript.min.js'))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./js'));
+  done();
+});
+
 gulp.task("watch", function(done) {
 
   sassConfig.outputStyle = 'nested';
   gulp.watch(sassFiles, gulp.parallel('build:css'));
 
+  gulp.watch(jsFiles, gulp.parallel('build:js'));
+
   done();
 });
 
-gulp.task('build', gulp.parallel('build:css'));
+gulp.task('build', gulp.parallel('build:css', 'build:js'));

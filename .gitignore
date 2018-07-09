@@ -46,6 +46,10 @@ node_modules/
 style.css
 style.css.map
 
+# ignore compiled JS
+js/javascript.min.js
+js/javascript.min.js.map
+
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
