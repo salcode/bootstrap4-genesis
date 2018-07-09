@@ -39,7 +39,7 @@ gulp.task('build:css', function( done ) {
     .pipe(sass(sassConfig).on('error', sass.logError))
     .pipe(rename('style.css'))
     .pipe(header(styleCssBanner, { theme: pkg.config.theme } ))
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write('./sass'))
     .pipe(gulp.dest('.'));
   done();
 });
