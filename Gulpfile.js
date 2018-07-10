@@ -1,6 +1,6 @@
 'use strict';
 
-var sassFiles = 'sass/main.scss',
+var sassFiles = 'sass/*.scss',
   jsFiles = [ 'js/custom/**/*.js' ];
 
 var sassConfig = {
