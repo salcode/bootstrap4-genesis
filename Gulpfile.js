@@ -27,6 +27,7 @@ var styleCssBanner = ['/**',
 var concat = require('gulp-concat'),
   gulp = require('gulp'),
   header = require('gulp-header'),
+  livereload = require('gulp-livereload'),
   pkg = require('./package.json'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
@@ -40,7 +41,8 @@ gulp.task('build:css', function( done ) {
     .pipe(rename('style.css'))
     .pipe(header(styleCssBanner, { theme: pkg.config.theme } ))
     .pipe(sourcemaps.write('./sass'))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('.'))
+    .pipe(livereload());
   done();
 });
 
@@ -50,11 +52,14 @@ gulp.task('build:js', function( done ) {
     .pipe(concat('javascript.min.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./js'));
+    .pipe(gulp.dest('./js'))
+    .pipe(livereload());
   done();
 });
 
 gulp.task("watch", function(done) {
+
+  livereload.listen();
 
   sassConfig.outputStyle = 'nested';
   gulp.watch(sassFiles, gulp.parallel('build:css'));

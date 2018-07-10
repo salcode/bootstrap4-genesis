@@ -31,6 +31,27 @@ npm watch
 
 which will watch for changes in the project and run the necessary build process steps when these changes occur.
 
+#### LiveReload in Development
+
+During development you can use the [LiveReload](http://livereload.com/) functionality to automatically reload your page when you make any changes to SCSS or JavaScript.
+
+To enable this feature add the following to an **mu-plugin** (preferred) or in `functions.php`.
+
+On my development sites, I add this code at `wp-content/mu-plugins/livereload.php`
+
+```
+<?php
+/**
+ * Add LiveReload snippet.
+ *
+ * For DEVELOPMENT only.
+ */
+add_action( 'genesis_after', function() {
+	// phpcs:disable WordPress.WP.EnqueuedResources.NonEnqueuedScript
+	echo '<script src="http://localhost:35729/livereload.js?snipver=1"></script>';
+} );
+```
+
 ### Build Process for Production
 
 When you files are ready for deployment, you should run
