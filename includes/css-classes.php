@@ -17,6 +17,7 @@ add_filter( 'genesis_attr_site-header', 'bs4g_genesis_attr_css_modifications', 1
 function bs4g_genesis_attr_css_modifications( $attr, $context ) {
 	$css_mapping = apply_filters( 'bootstrap4_genesis_css_mapping', array(
 		// Context    => classname to add,
+		'site-header' => 'navbar fixed-top navbar-dark bg-dark',
 	) );
 	$attr['class'] .= ' ' . $css_mapping[ $context ] ?? '';
 	return $attr;
