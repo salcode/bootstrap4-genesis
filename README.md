@@ -61,3 +61,15 @@ npm build
 ```
 
 to build all the necessary files and compress them where approriate.
+
+## Customization
+
+This is a starter theme which is meant to be modified.  As a Genesis child theme important updates should come at the parent theme level (as Genesis updates).
+
+Nevertheless, there are times a modification makes sense via a WordPress hook.
+
+### Available Filters
+
+#### bootstrap4_genesis_css_mapping
+
+The `bootstrap4_genesis_css_mapping` is a key/value array where each key is a Genesis **context** and the value is a string containing the class that should be added to the context (multiple classes can be added by providing a string of the classes, where each class is separated by a space).
