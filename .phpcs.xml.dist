@@ -36,6 +36,13 @@
 	<rule ref="Generic.Commenting.Todo"/>
 	<rule ref="Squiz.Commenting.FunctionComment.SpacingAfter"/>
 
+	<!-- Only enforce aligning assignment operators when difference is 2 or less. -->
+	<rule ref="Generic.Formatting.MultipleStatementAlignment">
+		<properties>
+			<property name="maxPadding" value="2" />
+		</properties>
+	</rule>
+
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array" value="bs4g, bootstrap4_genesis"/>
