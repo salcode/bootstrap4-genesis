@@ -73,3 +73,46 @@ Nevertheless, there are times a modification makes sense via a WordPress hook.
 #### bootstrap4_genesis_css_mapping
 
 The `bootstrap4_genesis_css_mapping` is a key/value array where each key is a Genesis **context** and the value is a string containing the class that should be added to the context (multiple classes can be added by providing a string of the classes, where each class is separated by a space).
+
+#### bootstrap4_genesis_site_title_content
+
+The `bootstrap4_genesis_site_title_content` is a string of the content displayed inside the site link found in the header (by default the content is the site title, i.e. `get_bloginfo( 'name' )`).
+
+To replace the site title with an image.
+
+**Step 1**: Change the text title to an image
+
+**Step 2**: Remove margin on site title element
+
+Because the site title is displayed as text as default, it is wrapped in a paragraph tag that includes margin on the bottom (this is part of the Bootstrap default styling).
+
+Once we replace the site title with an image, we no longer want this margin.
+
+```
+<?php
+/**
+ * Replace Site Title Text with an Image
+ * Bootstrap4 Genesis Modification
+ *
+ * Replace the site title in the header with an image.
+ * https://github.com/salcode/bootstrap4-genesis
+ */
+
+/**
+ * Step 1: Change the text title to an image
+ */
+add_filter( 'bootstrap4_genesis_site_title_content', function( $content ) {
+return '<img
+	src="https://secure.gravatar.com/avatar/f7bea39ff77df472cc4e3c29e40d3e46?s=52&d=mm&r=g"
+	alt="Sal Ferrarello">';
+} );
+
+
+/**
+ * Step 2: Remove margin on site title element.
+ */
+add_filter( 'genesis_attr_site-title', function( $attr ) {
+	$attr['class'] .= ' mb-0';
+	return $attr;
+} );
+```
