@@ -5,6 +5,7 @@
  * @package bootstrap4genesis
  */
 add_filter( 'genesis_attr_site-header', 'bs4g_genesis_attr_css_modifications', 10, 3 );
+add_filter( 'genesis_attr_title-area', 'bs4g_genesis_attr_css_modifications', 10, 3 );
 
 /**
  * Modify Genesis Class Attributes.
@@ -18,6 +19,7 @@ function bs4g_genesis_attr_css_modifications( $attr, $context ) {
 	$css_mapping = apply_filters( 'bootstrap4_genesis_css_mapping', array(
 		// Context    => classname to add,
 		'site-header' => 'navbar fixed-top navbar-dark bg-dark',
+		'title-area'  => 'navbar-brand',
 	) );
 	$attr['class'] .= ' ' . $css_mapping[ $context ] ?? '';
 	return $attr;
