@@ -80,14 +80,6 @@ The `bootstrap4_genesis_site_title_content` is a string of the content displayed
 
 To replace the site title with an image.
 
-**Step 1**: Change the text title to an image
-
-**Step 2**: Remove margin on site title element
-
-Because the site title is displayed as text as default, it is wrapped in a paragraph tag that includes margin on the bottom (this is part of the Bootstrap default styling).
-
-Once we replace the site title with an image, we no longer want this margin.
-
 ```
 <?php
 /**
@@ -98,21 +90,9 @@ Once we replace the site title with an image, we no longer want this margin.
  * https://github.com/salcode/bootstrap4-genesis
  */
 
-/**
- * Step 1: Change the text title to an image
- */
-add_filter( 'bootstrap4_genesis_site_title_content', function( $content ) {
-return '<img
-	src="https://secure.gravatar.com/avatar/f7bea39ff77df472cc4e3c29e40d3e46?s=52&d=mm&r=g"
-	alt="Sal Ferrarello">';
-} );
-
-
-/**
- * Step 2: Remove margin on site title element.
- */
-add_filter( 'genesis_attr_site-title', function( $attr ) {
-	$attr['class'] .= ' mb-0';
-	return $attr;
+add_filter( 'bootstrap4_genesis_site_title_content', function() {
+	return '<img
+		src="https://secure.gravatar.com/avatar/f7bea39ff77df472cc4e3c29e40d3e46?s=52&d=mm&r=g"
+		alt="Sal Ferrarello">';
 } );
 ```

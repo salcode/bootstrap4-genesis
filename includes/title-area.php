@@ -1,34 +1,37 @@
 <?php
 /**
- * ????
+ * Title Area Modifications.
  *
  * @package bootstrap4genesis
  */
 
 /**
- * Remove website description from header.
+ * Remove site description from title area.
  */
-add_filter( 'genesis_seo_description', '__return_null' );
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 
+/**
+ * Replace site title with new markup.
+ *
+ * Includes filter 'bootstrap4_genesis_site_title_content',
+ * which can be used to replace the title with an image.
+ */
+add_filter( 'genesis_seo_title', 'bs4g_genesis_seo_title' );
 
-add_filter( 'genesis_seo_title', function( $title, $inside, $wrap ) {
+function bs4g_genesis_seo_title() {
 
-	// Update $inside to be image.
-	$inside = sprintf( '<a href="%s">%s</a>',
-		trailingslashit( home_url() ),
-		apply_filters( 'bootstrap4_genesis_site_title_content', get_bloginfo( 'name' ) )
-	);
-
-	$title = genesis_markup( array(
-		'open'    => sprintf( "<{$wrap} %s>", genesis_attr( 'site-title' ) ),
-		'close'   => "</{$wrap}>",
-		'content' => $inside,
+	return genesis_markup( array(
+		'open'    => sprintf(
+			'<a href="%s" %s>',
+			trailingslashit( home_url() ),
+			genesis_attr( 'site-title' )
+		),
+		'close'   => '</a>',
+		'content' => apply_filters( 'bootstrap4_genesis_site_title_content', get_bloginfo( 'name' ) ),
 		'context' => 'site-title',
 		'echo'    => false,
 		'params'  => array(
-			'wrap' => $wrap,
+			'wrap' => 'a',
 		),
 	) );
-
-	return $title;
-}, 10, 3 );
+}
