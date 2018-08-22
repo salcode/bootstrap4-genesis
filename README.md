@@ -26,7 +26,7 @@ to install all of the necessary dependencies.
 During development, you should run
 
 ```
-npm watch
+npm run watch
 ```
 
 which will watch for changes in the project and run the necessary build process steps when these changes occur.
@@ -57,7 +57,7 @@ add_action( 'genesis_after', function() {
 When you files are ready for deployment, you should run
 
 ```
-npm build
+npm run build
 ```
 
 to build all the necessary files and compress them where approriate.
