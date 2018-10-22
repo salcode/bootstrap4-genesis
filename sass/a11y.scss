@@ -1,0 +1,19 @@
+.genesis-skip-link {
+	list-style: none;
+	margin: 0;
+	position: absolute;
+	top: 10px;
+	z-index: 9999;
+
+	li {
+		height: 0;
+	}
+	a {
+		@include sr-only;
+		@include sr-only-focusable;
+		background-color: $white;
+	}
+}
+.screen-reader-text {
+	@include sr-only;
+}
