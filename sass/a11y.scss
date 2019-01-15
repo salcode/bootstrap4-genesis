@@ -2,8 +2,8 @@
 	list-style: none;
 	margin: 0;
 	position: absolute;
-	top: 10px;
-	z-index: 9999;
+	top: 30px;
+	z-index: 999999;
 
 	li {
 		height: 0;
@@ -12,6 +12,7 @@
 		@include sr-only;
 		@include sr-only-focusable;
 		background-color: $white;
+		padding: 1rem;
 	}
 }
 .screen-reader-text {
