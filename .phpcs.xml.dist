@@ -43,6 +43,13 @@
 		</properties>
 	</rule>
 
+	<!-- Do not follow WordPress class name naming requirements -->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="strict_class_file_names" value="false" />
+		</properties>
+	</rule>
+
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array" value="bs4g, bootstrap4_genesis"/>
