@@ -26,7 +26,6 @@ add_theme_support(
 	'genesis-accessibility',
 	array(
 		'404-page',
-		'drop-down-menu',
 		'headings',
 		'rems',
 		'search-form',
