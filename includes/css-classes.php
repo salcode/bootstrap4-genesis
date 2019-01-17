@@ -16,6 +16,7 @@ add_filter( 'genesis_attr_entry-image', 'bs4g_genesis_attr_css_modifications', 1
 add_filter( 'genesis_attr_entry-title', 'bs4g_genesis_attr_css_modifications', 10, 3 );
 add_filter( 'genesis_attr_entry-content', 'bs4g_genesis_attr_css_modifications', 10, 3 );
 add_filter( 'genesis_attr_cpt-archive-description', 'bs4g_genesis_attr_css_modifications', 10, 3 );
+add_filter( 'genesis_attr_site-footer', 'bs4g_genesis_attr_css_modifications', 10, 3 );
 
 
 
@@ -39,6 +40,7 @@ function bs4g_genesis_attr_css_modifications( $attr, $context ) {
 		'site-header' => 'navbar navbar-dark bg-dark navbar-expand-lg',
 		'site-inner'  => 'container pt-3 pt-md-5',
 		'title-area'  => 'navbar-brand',
+		'site-footer' => 'text-center my-5 mx-3',
 	) );
 	$site_layout = genesis_site_layout();
 	switch ( $site_layout ) {
