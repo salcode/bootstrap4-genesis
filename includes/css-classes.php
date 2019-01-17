@@ -40,6 +40,35 @@ function bs4g_genesis_attr_css_modifications( $attr, $context ) {
 		'site-inner'  => 'container pt-3 pt-md-5',
 		'title-area'  => 'navbar-brand',
 	) );
+	$site_layout = genesis_site_layout();
+	switch ( $site_layout ) {
+		case 'content-sidebar':
+			$css_mapping['content']           .= ' col-md-8';
+			$css_mapping['sidebar-primary']   .= ' col-md-4';
+			break;
+		case 'sidebar-content':
+			$css_mapping['sidebar-primary']   .= ' col-md-4 order-first';
+			$css_mapping['content']           .= ' col-md-8';
+			break;
+		case 'content-sidebar-sidebar':
+			$css_mapping['content']           .= ' col-md-4';
+			$css_mapping['sidebar-primary']   .= ' col-md-4';
+			$css_mapping['sidebar-secondary'] .= ' col-md-4';
+			break;
+		case 'sidebar-sidebar-content':
+			$css_mapping['sidebar-primary']   .= ' col-md-4 order-first';
+			$css_mapping['sidebar-secondary'] .= ' col-md-4';
+			$css_mapping['content']           .= ' col-md-4 order-last';
+			break;
+		case 'sidebar-content-sidebar':
+			$css_mapping['sidebar-primary']   .= ' col-md-4 order-first';
+			$css_mapping['content']           .= ' col-md-4';
+			$css_mapping['sidebar-secondary'] .= ' col-md-4';
+			break;
+		case 'full-width-content':
+			$css_mapping['content']           .= 'col-md-10';
+			break;
+	}
 	$attr['class'] .= ' ' . $css_mapping[ $context ] ?? '';
 	return $attr;
 }
