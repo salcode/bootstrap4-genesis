@@ -64,11 +64,30 @@ to build all the necessary files and compress them where approriate.
 
 ## Customization
 
+### CSS
+
+Do **not** modify `style.css`, this file is generated from the Sass files.
+If you modify `style.css` and then run the build process, it will overwrite
+`style.css` and you will lose your changes.
+
+Instead, please make your changes to the Sass files (in `/sass`).
+
+The primary entry point for Sass is `/sass/custom.scss` (which is set in
+`Gulpfile.js`). All other Sass files are loaded from the `custom.scss` file.
+
+Generally, adding new Sass files (e.g. `/sass/_footer.scss`) and then importing
+that file in `custom.scss` is my preferred way to add new CSS.
+
+```
+@import "footer";
+```
+
+### Available Custom WordPress Filters
+
 This is a starter theme which is meant to be modified.  As a Genesis child theme important updates should come at the parent theme level (as Genesis updates).
 
-Nevertheless, there are times a modification makes sense via a WordPress hook.
-
-### Available Filters
+Sometimes it is easier to make a modification via a WordPress hook then
+modify Bootstrap 4 Genesis directly.
 
 #### bootstrap4_genesis_css_mapping
 
