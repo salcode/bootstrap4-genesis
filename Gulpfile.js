@@ -35,7 +35,7 @@ var concat = require('gulp-concat'),
   uglify = require('gulp-uglify');
 
 gulp.task('build:css', function( done ) {
-  gulp.src('sass/main.scss')
+  gulp.src('sass/custom.scss')
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig).on('error', sass.logError))
     .pipe(rename('style.css'))
