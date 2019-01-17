@@ -1,0 +1,24 @@
+div.pagination {
+	display: block;
+}
+.pagination ul {
+	@extend .pagination;
+	justify-content: center;
+}
+.pagination li {
+	@extend .page-item;
+}
+.pagination li a {
+	@extend .page-link;
+}
+.pagination-omission {
+    position: relative;
+    float: left; // Collapse white-space
+    padding: $pagination-padding-y $pagination-padding-x;
+    line-height: $pagination-line-height;
+    text-decoration: none;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: $pagination-border-width solid $pagination-border-color;
+    margin-left: -1px;
+}
