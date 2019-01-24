@@ -8,12 +8,12 @@
 .comment-respond,
 .entry-comments,
 .entry-pings {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .comment-list,
 .comment-list .children {
-    margin: 20px 0 0;
+    margin: 1.2rem 0 0;
     padding:0;
 }
 
@@ -38,15 +38,14 @@
 
 .comment-respond label {
     display: block;
-    margin-right: 12px;
 }
 
 .comment-list>li,
 .comment-list .children>li,
 .ping-list>li {
     list-style-type: none;
-    margin-top: 24px;
-    padding:10px;
+    margin-top: 1.5rem;
+    padding: 0.6em;
 }
 
 li.comment {
@@ -69,6 +68,6 @@ li.bypostauthor {
 
 .form-allowed-tags {
     background-color: $single-comment-bg-color;
-    font-size: 14px;
-    padding: 24px;
+    font-size: 0.9rem;
+    padding: 1.6em;
 }
