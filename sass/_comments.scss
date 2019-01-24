@@ -1,0 +1,73 @@
+/* Comment Styles
+------------------------------------------------------------ */
+
+#comment {
+    width: 100%;
+}
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+    margin-bottom: 2.5rem;
+}
+
+.comment-list,
+.comment-list .children {
+    margin: 1.2rem 0 0;
+    padding:0;
+}
+
+.comment-respond a,
+.entry-comments a {
+    border-bottom: 1px solid #ddd;
+}
+
+.comment-content {
+    clear: both;
+}
+
+.entry-comments .comment-author {
+    margin-bottom: 0;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+    width: 50%
+}
+
+.comment-respond label {
+    display: block;
+}
+
+.comment-list>li,
+.comment-list .children>li,
+.ping-list>li {
+    list-style-type: none;
+    margin-top: 1.5rem;
+    padding: 0.6em;
+}
+
+li.comment {
+    background-color: $single-comment-bg-color;
+    border: 2px solid #fff;
+    border-right: none;
+}
+
+.comment .avatar {
+    margin: 0 16px 24px 0;
+}
+
+.entry-pings .reply {
+    display: none;
+}
+
+li.bypostauthor {
+    background-color: $single-comment-post-author-bg-color;
+}
+
+.form-allowed-tags {
+    background-color: $single-comment-bg-color;
+    font-size: 0.9rem;
+    padding: 1.6em;
+}
