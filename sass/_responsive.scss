@@ -1,0 +1,21 @@
+/**
+ * Ensure elements do not exceed their contain (i.e. are responsive)
+ */
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.wp-caption,
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+
+input,
+textarea,
+select {
+	max-width: 100%;
+}
