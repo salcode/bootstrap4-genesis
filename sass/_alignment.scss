@@ -1,0 +1,23 @@
+/**
+ * On mobile devices all alignment should be treated as .aligncenter.
+ */
+.alignleft,
+.alignright,
+.aligncenter {
+	display: block;
+	margin: 0.6rem auto;
+}
+
+/**
+ * Once we reach the md breakpoint, apply .alignright and .alignleft styles.
+ */
+@include media-breakpoint-up(md) {
+	.alignleft {
+		float: left;
+		margin-right: 1.25rem;
+	}
+	.alignright {
+		float: right;
+		margin-left: 1.25rem;
+	}
+}
