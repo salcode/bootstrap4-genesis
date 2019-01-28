@@ -66,7 +66,7 @@ to build all the necessary files and compress them where approriate.
 
 ### PHP
 
-Any files added to the `includes/` directory, will be run on the `genesis_setup` action. Adding new files for each modification is a good way to keep your changes modular.
+Any PHP files added to the `includes/` directory, will be run on the `genesis_setup` action hook. Adding new files for each modification is a good way to keep your changes modular.
 
 ### CSS
 
