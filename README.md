@@ -82,6 +82,37 @@ that file in `custom.scss` is my preferred way to add new CSS.
 @import "footer";
 ```
 
+### Add a Google Font
+
+#### Load the Font
+
+Add a file to the `includes/` directory, which will be automatically run (e.g. `includes/google-fonts.php`). The file should contain the code to enqueue the Google font, e.g.
+
+```
+<?php
+
+add_action( 'wp_enqueue_scripts', 'my_bs4g_enqueue_fonts' );
+
+function my_bs4g_enqueue_fonts() {
+	wp_register_style(
+		'open-sans-font',
+		'https://fonts.googleapis.com/css?family=Open+Sans',
+		array(),
+		false,
+		'all'
+	);
+	wp_enqueue_style( 'open-sans-font' );
+}
+```
+
+#### Use the Font
+
+Modify your CSS to use the new font, e.g. in `sass/_variables.scss`
+
+```
+$font-family-sans-serif: 'Open Sans', sans-serif;
+```
+
 ### Available Custom WordPress Filters
 
 This is a starter theme which is meant to be modified.  As a Genesis child theme important updates should come at the parent theme level (as Genesis updates).
