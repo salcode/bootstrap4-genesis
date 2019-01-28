@@ -115,3 +115,11 @@ add_filter( 'bootstrap4_genesis_site_title_content', function() {
 		alt="Sal Ferrarello">';
 } );
 ```
+
+## Departure from Bootstrap 4 Styles
+
+Overall the goal of this project is to apply Bootstrap 4 styles to a Genesis child theme as a starting point for development. There are rare cases where the styles in this theme depart from the default Bootstrap 4 styles.
+
+### Inline Code and Code Blocks
+
+I disagree with the choices made for the official [Bootstrap Code styles](https://getbootstrap.com/docs/4.2/content/code/) and therefore have modified these styles in this theme.
