@@ -3,3 +3,13 @@ pre {
 	border-radius: 0.2rem;
 	padding: 16px;
 }
+
+code {
+	background-color: darken($gray-100, 1% );
+	border-radius: 0.2rem;
+	padding: 0.2em 0.4em;
+}
+pre code {
+	background-color: transparent;
+	padding: 0;
+}
