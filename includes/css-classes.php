@@ -38,7 +38,7 @@ function bs4g_genesis_attr_css_modifications( $attr, $context ) {
 		'entry-image' => 'img-fluid mb-3',
 		'sidebar-primary' => '',
 		'site-header' => 'navbar navbar-dark bg-dark navbar-expand-lg',
-		'site-inner'  => 'container pt-3 pt-md-5',
+		'site-inner'  => 'container pt-3 pt-md-4',
 		'title-area'  => 'navbar-brand',
 		'site-footer' => 'text-center my-5 mx-3',
 	) );
