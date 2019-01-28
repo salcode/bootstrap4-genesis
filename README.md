@@ -64,6 +64,10 @@ to build all the necessary files and compress them where approriate.
 
 ## Customization
 
+### PHP
+
+Any files added to the `includes/` directory, will be run on the `genesis_setup` action. Adding new files for each modification is a good way to keep your changes modular.
+
 ### CSS
 
 Do **not** modify `style.css`, this file is generated from the Sass files.
