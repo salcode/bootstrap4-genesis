@@ -1,0 +1,4 @@
+.entry table {
+	@extend .table;
+	@extend .table-bordered;
+}
