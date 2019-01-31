@@ -12,8 +12,8 @@ var styleCssBanner = ['/**',
   ' * Theme URI: <%= theme.uri %>',
   ' * Author: <%= theme.author %>',
   ' * Author URI: <%= theme.authoruri %>',
-  ' * Description: <%= theme.description %>',
-  ' * Version: <%= theme.version %>',
+  ' * Description: <%= pkg.description %>',
+  ' * Version: <%= pkg.version %>',
   ' * License: <%= theme.license %>',
   ' * License URI: <%= theme.licenseuri %>',
   ' * Text Domain: <%= theme.textdomain %>',
@@ -39,7 +39,7 @@ gulp.task('build:css', function( done ) {
     .pipe(sourcemaps.init())
     .pipe(sass(sassConfig).on('error', sass.logError))
     .pipe(rename('style.css'))
-    .pipe(header(styleCssBanner, { theme: pkg.config.theme } ))
+    .pipe(header(styleCssBanner, { pkg: pkg, theme: pkg.config.theme } ))
     .pipe(sourcemaps.write('./sass'))
     .pipe(gulp.dest('.'))
     .pipe(livereload());

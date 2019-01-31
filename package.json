@@ -8,8 +8,6 @@
       "uri": "https://github.com/salcode/bootstrap4-genesis",
       "author": "Sal Ferrarello",
       "authoruri": "https://salferrarello.com",
-      "description": "WordPress Genesis Child Theme using Bootstrap 4",
-      "version": "0.1.0",
       "license": "GPL-2.0-or-later",
       "licenseuri": "https://spdx.org/licenses/GPL-2.0-or-later.html",
       "textdomain": "bootstrap4-genesis",
