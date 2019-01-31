@@ -1,0 +1,6 @@
+blockquote {
+	@extend .blockquote;
+}
+blockquote footer {
+	@extend .blockquote-footer;
+}
