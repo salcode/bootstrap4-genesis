@@ -1,5 +1,7 @@
 blockquote {
 	@extend .blockquote;
+	border-left: .25em solid $gray-200;
+	padding: 0 1em;
 }
 blockquote footer {
 	@extend .blockquote-footer;
