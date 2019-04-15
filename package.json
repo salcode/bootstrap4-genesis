@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/salcode/bootstrap4-genesis/blob/master/README.md",
   "devDependencies": {
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.7",

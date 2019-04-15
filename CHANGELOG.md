@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- Update to Bootstrap v4.3.1
 - Apply Bootstrap .table and .table-bordered to all tables
 - Populate CHILD_THEME_NAME, CHILD_THEME_URL, and CHILD_THEME_VERSION based on values in style.css
 
