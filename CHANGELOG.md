@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.3] - 2019-05-02
+### Updated
+- CHANGELOG.md
+
+## [1.1.2] - 2019-05-02
+### Updated
+- Update gulp and some gulp tools
+
 ## [1.1.1] - 2019-04-15
 ### Updated
 - Corrected CHANGELOG
