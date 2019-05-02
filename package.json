@@ -1,6 +1,6 @@
 {
   "name": "bootstrap4-genesis",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "WordPress Genesis Child Theme using Bootstrap 4",
   "config": {
     "theme": {
@@ -45,14 +45,14 @@
   "homepage": "https://github.com/salcode/bootstrap4-genesis/blob/master/README.md",
   "devDependencies": {
     "bootstrap": "^4.3.1",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-header": "^2.0.7",
     "gulp-livereload": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1"
   }
 }
