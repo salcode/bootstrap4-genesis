@@ -15,7 +15,7 @@ function bs4g_wp_nav_menu_args( $args ) {
 	) {
 		$args['depth']  = 2;
 		$args['before'] = '';
-		$args['menu_class'] = 'navbar-nav ' . $args['menu_class'];
+		$args['menu_class'] = 'navbar-nav mr-auto ' . $args['menu_class'];
 		$args['walker'] = new BS4G_Nav_Walker();
 	}
 	return $args;
