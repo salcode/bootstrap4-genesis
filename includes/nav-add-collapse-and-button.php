@@ -19,6 +19,7 @@ function bs4g_genesis_do_nav( $nav_output, $nav, $args ) {
 		',
 		$data_target
 	);
+	$nav = apply_filters( 'bs4g_genesis_do_nav_content', $nav, $args );
 
 	$post = "\n</nav>\n";
 	return $pre . $nav . $post;
