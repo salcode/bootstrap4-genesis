@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Filter `bs4g_genesis_do_nav_content` to modify the `genesis_do_nav` content between the `<nav>` tags.
 ### Updated
 - Update npm dependencies for security patches to build tools
 

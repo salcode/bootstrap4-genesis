@@ -151,6 +151,10 @@ add_filter( 'bootstrap4_genesis_site_title_content', function() {
 } );
 ```
 
+#### bs4g_genesis_do_nav_content
+
+The `bs4g_genesis_do_nav_content` is the `genesis_do_nav` content that appears between the opening and closing `<nav>` tags in the header.
+
 ## Departure from Bootstrap 4 Styles
 
 Overall the goal of this project is to apply Bootstrap 4 styles to a Genesis child theme as a starting point for development. There are rare cases where the styles in this theme depart from the default Bootstrap 4 styles.
