@@ -38,8 +38,8 @@ class BS4G_Nav_Walker extends Walker_Nav_Menu {
 			apply_filters( 'nav_menu_submenu_css_class', array( 'dropdown-menu' ), $args, $depth )
 		);
 		$output .= sprintf(
-			'<div class="dropdown-menu" aria-labelledby="navbarDropdown">',
-			esc_attr( $clas_names )
+			'<div class="%s" aria-labelledby="navbarDropdown">',
+			esc_attr( $class_names )
 		);
 	}
 
