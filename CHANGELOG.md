@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Theme preview image, screenshot.png
 ### Fixed
 - Apply `nav_menu_submenu_css_class` filter to custom nav walker start_lvl classes
+### Updated
+- Update npm dependencies for security patches to build tools
 
 ## [1.2.0] - 2019-05-17
 ### Added
