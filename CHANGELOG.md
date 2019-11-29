@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.3.1] - 2019-11-29
+### Updated
+- Update to Bootstrap v4.4.1
+- Bump lodash.template from 4.4.0 to 4.5.0
+
 ## [1.2.1] - 2019-09-26
 ### Added
 - Theme preview image, screenshot.png
