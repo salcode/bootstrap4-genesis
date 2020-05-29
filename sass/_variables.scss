@@ -259,7 +259,7 @@ $black:    #000 !default;
 //$font-family-base:            $font-family-sans-serif !default;
 //// stylelint-enable value-keyword-case
 
-//$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:                1.4rem !default;
 //$font-size-lg:                ($font-size-base * 1.25) !default;
 //$font-size-sm:                ($font-size-base * .875) !default;
 
