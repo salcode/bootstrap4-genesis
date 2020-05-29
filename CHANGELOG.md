@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.3.2] - 2020-05-29
+- Update to Bootstrap v4.5.0
+- Update Acorn to 5.7.4
+- Update other NPM dependencies
+### Fixed
+- Remove console.log from main.js
+
 ## [1.3.1] - 2019-11-29
 ### Updated
 - Update to Bootstrap v4.4.1
