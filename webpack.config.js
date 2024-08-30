@@ -2,7 +2,10 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+  entry: [
+    './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+    './js/custom/main.js',
+  ],
   externals: {
     jquery: 'jQuery',
   },
