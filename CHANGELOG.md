@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fix: `add_theme_support()` for `html5` was being called incorrectly ([#72](https://github.com/salcode/bootstrap4-genesis/issues/72))
 - Add `.nvmrc` to project, set to `22` to make using the correct Node version easier with [nvm](https://github.com/nvm-sh/nvm) ([#75](https://github.com/salcode/bootstrap4-genesis/issues/75))
 - Remove Gulp build process (both `npm run build` and `npm run watch`) ([#75](https://github.com/salcode/bootstrap4-genesis/issues/75))
+- Add webpack build process `npm run build` ([#75](https://github.com/salcode/bootstrap4-genesis/issues/75))
 
 ## [1.3.2] - 2020-05-29
 - Update to Bootstrap v4.5.0
