@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 - Fix: Resolve warning undefined array key ([#71](https://github.com/salcode/bootstrap4-genesis/issues/71))
+- Fix: `add_theme_support()` for `html5` was being called incorrectly ([#72](https://github.com/salcode/bootstrap4-genesis/issues/72))
 
 ## [1.3.2] - 2020-05-29
 - Update to Bootstrap v4.5.0

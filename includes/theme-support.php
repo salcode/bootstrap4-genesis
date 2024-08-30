@@ -8,7 +8,7 @@
 /**
  * 'html5': Use HTML5 markup.
  */
-add_theme_support( 'html5' );
+add_theme_support( 'html5', [ 'comment-list', 'comment-form', 'search-form' ] );
 
 
 /**
