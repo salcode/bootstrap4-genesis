@@ -7,7 +7,7 @@ module.exports = {
   entry: [
     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     './js/custom/main.js',
-    './sass/example.css',
+    './sass/custom.scss',
   ],
   externals: {
     jquery: 'jQuery',
@@ -24,8 +24,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.scss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
