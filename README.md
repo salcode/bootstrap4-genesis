@@ -6,61 +6,29 @@ WordPress [Genesis Child Theme](https://my.studiopress.com/themes/genesis/) usin
 
 ## Build Process
 
-This projects uses a build process to:
+This project uses a build process to:
 
-- convert Sass (`.scss`) into CSS
-- combine and compress CSS files
+- convert Sass (`.scss`) into CSS and combine it into a single file (`style.css`)
+- combine the JS files into a single file (`js/javascript.min.js`)
 
 ### Initial Setup
 
-Before using this project's build process for the first time you need to run
+1. Make sure you're using the correct version of node (this is documented in `.nvmrc` for ease of use with the [nvm](https://github.com/nvm-sh/nvm) command)
+2. Install the dependencies by running
 
 ```
 npm install
 ```
-
-to install all of the necessary dependencies.
 
 ### Development
 
 During development, you should run
 
 ```
-npm run watch
-```
-
-which will watch for changes in the project and run the necessary build process steps when these changes occur.
-
-#### LiveReload in Development
-
-During development you can use the [LiveReload](http://livereload.com/) functionality to automatically reload your page when you make any changes to SCSS or JavaScript.
-
-To enable this feature add the following to an **mu-plugin** (preferred) or in `functions.php`.
-
-On my development sites, I add this code at `wp-content/mu-plugins/livereload.php`
-
-```
-<?php
-/**
- * Add LiveReload snippet.
- *
- * For DEVELOPMENT only.
- */
-add_action( 'genesis_after', function() {
-	// phpcs:disable WordPress.WP.EnqueuedResources.NonEnqueuedScript
-	echo '<script src="http://localhost:35729/livereload.js?snipver=1"></script>';
-} );
-```
-
-### Build Process for Production
-
-When you files are ready for deployment, you should run
-
-```
 npm run build
 ```
 
-to build all the necessary files and compress them where approriate.
+which will generate updated versions of the new files.
 
 ## Customization
 
@@ -76,8 +44,7 @@ If you modify `style.css` and then run the build process, it will overwrite
 
 Instead, please make your changes to the Sass files (in `/sass`).
 
-The primary entry point for Sass is `/sass/custom.scss` (which is set in
-`Gulpfile.js`). All other Sass files are loaded from the `custom.scss` file.
+The primary entry point for Sass is `/sass/custom.scss`. All other Sass files are loaded from the `custom.scss` file.
 
 Generally, adding new Sass files (e.g. `/sass/_footer.scss`) and then importing
 that file in `custom.scss` is my preferred way to add new CSS.
