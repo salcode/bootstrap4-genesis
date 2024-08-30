@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+- Fix: Resolve warning undefined array key ([#71](https://github.com/salcode/bootstrap4-genesis/issues/71))
 
 ## [1.3.2] - 2020-05-29
 - Update to Bootstrap v4.5.0

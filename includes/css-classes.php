@@ -71,6 +71,6 @@ function bs4g_genesis_attr_css_modifications( $attr, $context ) {
 			$css_mapping['content']           .= 'col-md-10';
 			break;
 	}
-	$attr['class'] .= ' ' . $css_mapping[ $context ] ?? '';
+	$attr['class'] .= ' ' . ( $css_mapping[ $context ] ?? '' );
 	return $attr;
 }
