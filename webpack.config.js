@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
@@ -20,6 +21,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "../style.css",
     }),
+    new webpack.BannerPlugin({
+      banner: getCssCommentBanner,
+      test: /\.css$/i,
+    }),
   ],
   module: {
     rules: [
@@ -30,3 +35,25 @@ module.exports = {
     ],
   },
 };
+
+function getCssCommentBanner() {
+  var packageJson = require('./package');
+  var {
+    config: {
+      theme
+    },
+  } = packageJson;
+  return `Theme Namez: ${theme.name}
+Theme URI: ${theme.uri}
+Author: ${theme.author}
+Author URI: ${theme.authoruri}
+Description: ${packageJson.description}
+Version: ${packageJson.version}
+License: ${theme.license}
+License URI: ${theme.licenseuri}
+Text Domain: ${theme.textdomain}
+Tags: ${theme.tags}
+Domain Path: ${theme.domainpath}
+Template: ${theme.template}
+Notes: ${theme.notes}`;
+}
