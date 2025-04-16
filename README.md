@@ -133,3 +133,7 @@ I find the [Bootstrap v4.x blockquote style](https://getbootstrap.com/docs/4.0/c
 ### Inline Code and Code Blocks
 
 I disagree with the choices made for the official [Bootstrap Code styles](https://getbootstrap.com/docs/4.2/content/code/) and therefore have modified these styles in this theme.
+
+## Increase Default Font Size
+
+The Bootstrap default font-size of `1rem` is too small in my opinion. I've increased it to `1.4rem` in release `2.0.0`
