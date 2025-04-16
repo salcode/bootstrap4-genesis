@@ -43,7 +43,7 @@ function getCssCommentBanner() {
       theme
     },
   } = packageJson;
-  return `Theme Namez: ${theme.name}
+  return `Theme Name: ${theme.name}
 Theme URI: ${theme.uri}
 Author: ${theme.author}
 Author URI: ${theme.authoruri}
