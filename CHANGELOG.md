@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - **BREAKING**: Remove Gulp build process (both `npm run build` and `npm run watch`) ([#75](https://github.com/salcode/bootstrap4-genesis/issues/75))
 - Add webpack build process `npm run build` ([#75](https://github.com/salcode/bootstrap4-genesis/issues/75))
 - **BREAKING**: Fix: Remove localization call ( `__()` ) on `Primary Navigation Menu` in `add_theme_support()` call to resolve notice ([#78](https://github.com/salcode/bootstrap4-genesis/issues/78))
+- **BREAKING**: Increase default font-size to `1.4rem` (an increase from `1rem`) ([#55](https://github.com/salcode/bootstrap4-genesis/issues/55))
 
 ## [1.3.2] - 2020-05-29
 - Update to Bootstrap v4.5.0
