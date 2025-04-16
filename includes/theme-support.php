@@ -8,7 +8,7 @@
 /**
  * 'html5': Use HTML5 markup.
  */
-add_theme_support( 'html5' );
+add_theme_support( 'html5', [ 'comment-list', 'comment-form', 'search-form' ] );
 
 
 /**
@@ -38,7 +38,7 @@ add_theme_support(
  * 'menus": Add Theme Support for Genesis Menus.
  */
 add_theme_support( 'genesis-menus', array(
-	'primary' => __( 'Primary Navigation Menu', 'bootstrap4-genesis' ),
+	'primary' => 'Primary Navigation Menu',
 	// 'secondary' => __( 'Secondary Navigation Menu', 'bootstrap4-genesis' ),
 	// 'header'    => __( 'Header Navigation Menu', 'bootstrap4-genesis' ),
 ) );
